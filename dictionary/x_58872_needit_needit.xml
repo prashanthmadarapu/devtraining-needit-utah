@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="50da99da83021210a46c92b6feaad36e" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element choice="3" default="contract" label="What needed" mandatory="true" max_length="40" name="uwhat_needed" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Sabbatical" sequence="0" value="sabbatical"/>
+                <element inactive_on_update="false" label="Releiving Letter" sequence="1" value="releivingletter"/>
+                <element inactive_on_update="false" label="Desk" sequence="3" value="desk"/>
+                <element inactive_on_update="false" label="Contract" sequence="5" value="contract"/>
+                <element inactive_on_update="false" label="Tax" sequence="7" value="tax"/>
+                <element inactive_on_update="false" label="Chair" sequence="2" value="chair"/>
+                <element inactive_on_update="false" label="Patent" sequence="4" value="patent"/>
+                <element inactive_on_update="false" label="Payslip" sequence="6" value="payslip"/>
+            </choice>
+        </element>
+        <element choice="3" default="legal" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="facilities"/>
+                <element inactive_on_update="false" label="Finance" sequence="3" value="finance"/>
+                <element inactive_on_update="false" label="Legal" sequence="2" value="legal"/>
+                <element inactive_on_update="false" label="Human Resources" sequence="0" value="hr"/>
+            </choice>
+        </element>
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element label="When needed" mandatory="true" max_length="255" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
